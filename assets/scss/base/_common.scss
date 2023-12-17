@@ -1,0 +1,58 @@
+// ::-webkit-scrollbar {
+//     -webkit-appearance: none;
+//     display: none;
+//   }
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+
+
+.label-left{
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+  border-right: solid 1px #707070;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.3s ease-out;
+  @include tablet{
+    width: 100%;
+    flex-direction: row;
+    position: relative;
+    padding: 22px 16px;
+    justify-content: space-between;
+    padding-right: 84px;
+    border-right: none;
+  }
+  .num{
+    font-size: 2rem;
+    font-weight: 700;
+    @include tablet{
+      font-size: 1.25rem;
+    }
+  }
+  .title{
+    font-size: 1.375rem;
+    font-weight: 700;
+    writing-mode: vertical-lr;
+    position: relative;
+    @include tablet{
+      font-size: 1.25rem;
+      writing-mode: lr-tb;
+    }
+  }
+  
+}

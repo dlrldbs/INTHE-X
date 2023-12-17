@@ -1,0 +1,44 @@
+/*반응형 화면 크기*/
+$mobile: 767px; //320
+$tablet: 1023px; // 768
+$desktop: 1200px; //1024
+
+/*반응형, 브라우저 크기가 767px 이하일때*/
+@mixin mobile{
+  @media (max-width: $mobile){
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+@mixin desktop{
+  @media (max-width: $desktop){
+    @content;
+  }
+}
+
+
+// @mixin mobile {
+//     @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin tablet {
+//     @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin desktop {
+//     @media (min-width: #{$breakpoint-desktop}) {
+//       @content;
+//     }
+//   }
